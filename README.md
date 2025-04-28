@@ -8,6 +8,7 @@
 - [담당 기능](#담당-기능)
 - [기술 스택](#기술-스택)
 - [담당 기능 실행 화면](#담당-기능-실행-화면)
+- [트러블슈팅](#트러블슈팅)
 <br/><br/>
 
 ## 프로젝트 소개
@@ -75,4 +76,4 @@ iOS 3명, BE 5명, PM 1명, Design 1명
 - UITableViewDataSourcePrefetching 프로토콜을 구현하여 효율적인 무한 스크롤 페이징을 적용
 - 게시글 정보를 테이블뷰의 헤더뷰로 분리하여 댓글 목록과 게시글 정보의 관리를 분리
 - [PR #100 - Feat: 오늘의 조합 상세보기 테이블뷰로 구현](https://github.com/UMC5th-DrinkingGourmet/dg-FrontEnd/pull/100)
-- [PR #102 - Feat: 오늘의 조합 댓글 구현](https://github.com/UMC5th-DrinkingGourmet/dg-FrontEnd/pull/100)
+- [PR #102 - Feat: 오늘의 조합 댓글 구현](https://github.com/UMC5th-DrinkingGourmet/dg-FrontEnd/pull/102)
