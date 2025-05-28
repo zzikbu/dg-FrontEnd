@@ -66,14 +66,15 @@ iOS 3명, BE 5명, PM 1명, Design 1명
 
 ### ✅ 메모리 효율성 향상을 위한 댓글 UI 구조 개선
 **문제상황**
-- 댓글 목록이 있는 커뮤니티 상세 페이지에서 UIStackView 기반으로 UI 구현 시 여러 성능 문제 발생
-- 모든 댓글 View를 한 번에 메모리에 로드하는 방식으로 인해 댓글이 많아질수록 메모리 사용량 급증
-- 페이징 처리 구현이 복잡하고, 스크롤 성능 저하 및 사용자 경험 악화
-- 새로운 댓글 추가나 삭제 시 전체 스택뷰 재구성 필요
+- 댓글 목록이 있는 커뮤니티 상세 페이지에서 `UIStackView` 기반으로 UI 구현 시 여러 성능 문제 발생
+- 모든 댓글 View를 한 번에 메모리에 로드하는 방식으로 인해 댓글이 많아질수록 **메모리 사용량 급증**
+- 페이징 처리 구현이 복잡하고, 새로운 댓글 추가나 삭제 시 전체 스택뷰 재구성 필요
 
 **해결방안**
-- UITableView의 셀 재사용 메커니즘을 활용하여 메모리 사용량을 크게 줄이고 성능을 개선
-- UITableViewDataSourcePrefetching 프로토콜을 구현하여 효율적인 무한 스크롤 페이징을 적용
+- `UITableView`의 셀 재사용 메커니즘을 활용하여 메모리 사용량을 크게 줄이고 성능을 개선
+- `UITableViewDataSourcePrefetching` 프로토콜을 활용해 무한 스크롤 페이징을 적용
 - 게시글 정보를 테이블뷰의 헤더뷰로 분리하여 댓글 목록과 게시글 정보의 관리를 분리
 - [PR #100 - Feat: 오늘의 조합 상세보기 테이블뷰로 구현](https://github.com/UMC5th-DrinkingGourmet/dg-FrontEnd/pull/100)
 - [PR #102 - Feat: 오늘의 조합 댓글 구현](https://github.com/UMC5th-DrinkingGourmet/dg-FrontEnd/pull/102)
+<br><br>
+  <img alt="comment_tableview]" width="260" src="https://github.com/zzikbu/dg-FrontEnd/blob/develop/readme_assets/comment_tableview.png?raw=true">
